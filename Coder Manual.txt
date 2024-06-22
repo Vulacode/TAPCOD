@@ -1,0 +1,260 @@
+CODER PROGRAM
+INSTRUCTIONS FOR USE
+SEPTEMBER 1988
+CODER PROGRAM
+INSTRUCTIONS FOR USE:
+
+The Main Menu of the Coder program looks like this:
+
+=============================================================
+                          CODER
+
+                    1FD Version 4.XX
+
+                        MAIN MENU
+
+             F1  : Load messages from disk
+             F2  : Save messages onto disk
+             F3  : Delete messages on disk
+
+             F4  : Encipher a message in memory
+             F5  : Decipher a message in memory
+
+             F6  : Type a new message
+             F7  : Edit/read a message in memory
+             F8  : Print messages
+             F9  : Terminal
+
+             F10 : Quit
+
+=============================================================
+
+The ten modules are accessed by pressing the relevant function keys (F1 - F10).
+
+Disks: To use the program you need three disks: the 'PROGRAM' disk; the 'DATA' disk; the 'MESSAGE' disk.
+
+Modules F1 - F3 start by warning you to have the 'MESSAGE' disk in the drive; modules F4 and F5 start by warning you to have the 'DATA'  disk in the drive; modules F6, F7 and F10 warn you to have the 'PROGRAM' disk in the drive. Errors are trapped and reported.
+
+Naming files: All modules except F9 and F10 require the naming of specific files. After pressing the required function key a directory of the file names that may be typed in is presented. F6 is different from the other modules in that it presents no  directory: you have to give a name to the message you are about to type. If you wish to return to the Main Menu without typing in a name you may do so by pressing the ENTER key. Names with extensions must be typed out in full (eg. 'FRED.ENC' listed in a directory is typed as 'fred.enc'). Names may be typed in either upper or lower case (ie. 'fred' is the same as 'FRED').
+
+Errors: Most errors produce a specific error message but some may simply pause the program and ask you to 'Try again'. To escape from error screens (all of which pause the program) press any key to continue (after attending to the cause of the error) or press ESCape to return to the Main Menu. If the program crashes due to an error just type 'coder' at the 'A>' prompt. This will reload the program; nothing in memory will be lost.
+
+SUMMARY OF MODULES
+
+F1  : Load messages from disk
+
+This module copies a file from a floppy disk in the drive into the memory.
+
+F1 is used for:
+
+-	loading messages prepared on the text editor (F6) and saved on disk for later enciphering;
+-	loading enciphered messages saved on disk for later sending;
+-	loading received enciphered messages and saved on disk for later deciphering;
+-	Loading deciphered messages saved on disk for later reference;
+-	obtaining a directory of files on any disk placed in the drive.
+
+F2  : Save messages on disk
+
+F2 is for saving files in memory onto a disk in the drive.
+
+F2 is used for:
+
+-	saving enciphered messages to be sent at a later time;
+-	saving deciphered messages for later reference;
+-	saving messages prepared on the text editor for later enciphering and reference;
+-	saving received enciphered messages for later deciphering;
+-	obtaining a directory of the files in memory.
+
+F3  : Delete messages on disk
+
+Through F3 any file on any disk placed in the drive may be deleted. You must not delete any files on the 'PROGRAM' or 'DATA' disks, however. For security reasons all files - plaintext, enciphered and deciphered - should be deleted from the 'MESSAGE' disk as soon as they are no longer needed.
+
+F3 is used for:
+
+-	deleting plaintext messages prepared on the text editor, saved on disk for later enciphering and that have been reloaded and enciphered;
+-	deleting old received enciphered messages and that have been deciphered;
+-	deleting old enciphered messages that have been sent;
+-	deleting old deciphered messages that have been saved;
+-	deleting any other files that you wish to have deleted;
+-	obtaining a directory of files on any disk placed in the drive.
+
+F4  : Encipher a message in memory
+
+On pressing F4 you are warned to place the 'DATA' disk in the drive. The directory of F4 lists only those files with the extension '.TXT' as only these may be enciphered.
+
+After typing in the name of the message you wish to encipher the program loads several files from the 'DATA' disk. As it loads these you are notified how many sets of data are left on the 'DATA' disk. There are 95 sets to start with, meaning that you can encipher 95 messages. When the number gets low you must take steps to get a new 'DATA' disk.
+
+** NB ** The 'DATA' disk must not be removed from the drive until the enciphering is finished and the program has returned to the Main Menu.
+
+The enciphering counts the number of characters in the message as it enciphers them and displays this on the screen.
+
+After enciphering, the data  used to encipher the message are overwritten and deleted from the disk. The numbers are removed totally so an intercepted enciphered message cannot be deciphered if the 'DATA' disk should land in the hands of the interceptors.
+
+The enciphered message may be viewed after enciphering by loading it into the editor (F7). However, there is no point in doing this and under no circumstances should the enciphered message be altered. If it is it will not decipher properly.
+
+Enciphered messages are given the extension '.ENC' by the program so that they can be identified for saving on disk and for sending (eg. plaintext message 'FRED.TXT' becomes 'FRED.ENC').
+
+Enciphering does not destroy the plaintext message so if after you have enciphered a message you want to make some changes to it you may do so. Simply press F7, edit the plaintext message and re-encipher it. But remember that each time you encipher a message you use another set of numbers on the 'DATA' disk.
+
+As enciphered messages are in memory they do not need to be saved on disk when you go to the modem part of the program (F10).
+
+F5  : Decipher a message in memory
+
+Messages for deciphering are those which have been sent directly or downloaded from TG. It is not possible to decipher your own enciphered messages. However, this is not a problem because, as explained above, your plaintext message remains intact after enciphering and may be amended and re-enciphered.
+
+A message cannot be deciphered directly from disk: it must first be in memory. It will be in memory if you have just received it, but if you received it earlier, saved it on disk and turned the computer off, you will have to load it again through F2.
+
+To decipher, press F5 and place the 'DATA'  disk in the drive. (The disk must not be removed until the deciphering is finished and the program has returned to the Main Menu.) Type in the name of the file you want to have deciphered. This done, the program reads data from the 'DATA' disk and then prints out the deciphered message on the screen. If the message is longer than the space on the screen it does not scroll upwards but continues to print out at the top of the screen, overwriting the lines already there. It does not matter if you have not read the overwritten lines as the message is in memory and may be re-read in the text editor, saved on disk or printed out.
+
+At the end of the deciphering, data used to decipher the message are overwritten and deleted. There are 95 sets of data on the 'DATA'  disk - to decipher 95 messages.
+
+A deciphered message may be printed out using F7 or F8, or saved on disk using F2. A deciphered message is identified by its extension '.DEC' (i.e. received enciphered message 'FRED' becomes 'FRED.DEC' after deciphering).
+
+F6  : Type a new message
+
+Names: The first screen of the module asks you to give a name to the message you are about to type. This name should consist of alphabetical characters only (eg. not: fred5), should not contain any spaces (eg. not: fred five), should not contain an extension (eg. not: fred.five) and should not be more than eight characters long. Just choose a simple name like 'fred' or 'sally'.
+
+Text editor: The program then loads the text editor on which you can type your messages and print them out. To move the cursor use the arrow, 'PgUp', 'PgDn', 'Home' and 'End' keys; these can be used in conjunction with the SHIFT keys to move the cursor by word, line and sentence. Change to overwrite mode by pressing the 'Insert' key and back to insert mode by pressing it again. The normal delete keys are used to delete characters and the keys 'H', 'J', 'K' and 'L', pressed simultaneously with the ALT key, delete word or line left or right. You should not need the extended editing functions of the editor but if you do, information can be obtained by  pressing F2-Help from within the editor.
+
+Format of messages: You may type in headings, paragraphs and line breaks when preparing your message but there is no point in doing so as the enciphering part of the program does not recognise them and strips them off.
+
+Security: Do not end messages with full stops as this is what a cryptanalist would look for. Always vary  your style of typing and try to start and end your messages in a different way each time.
+
+Message length: Messages may be any length but for reasons of security it is best to keep them as short as possible - not more than a screenfull. Security is not compromised by longer messages, however. To get as much information in a message as possible write in telegraphic language and don't say anything that does not need to be said.
+
+Printing: If you have a printer, a printed copy of the message can be made simply by pressing shifted the 'Prt Sc' key. On pressing the keys you will be asked several questions at the bottom of the editor screen relating to device, start-page and end-page: just keep pressing ENTER until it prints out.
+
+Quitting from the editor: When you have finished typing your message (and have printed it out) press F1-Quit and 'E' (exit) to return to the Main Menu of the Coder program. This saves your message into memory. You may now save it on disk (F2) for later enciphering, or encipher it immediately (F4).
+
+F7  : Edit/read a message in memory
+
+This module is much the same as F6 but allows you to select from messages already in memory one that you wish to edit (alter, update, lengthen, shorten etc.) or re-read.
+
+Type in one of the message names given in the directory and press ENTER. Once in the editor plaintext messages may be altered in any way you wish and then printed out either from within the editor (explained under F6 above) or through F8 of the Coder program.
+
+Reformatting: A message that has just been deciphered and which you wish to re-read is in the form of a long string in memory (i.e. it has no line breaks). Therefore when it appears on the screen of the editor you will only see one line, the rest of it going off the screen beyond the right margin. To reformat the message press ENTER - the rest of it will come back onto the screen. If you want to reshape the message before printing it out you may manually insert paragraphs, line breaks, headings, tabs, indents, etc.
+
+F8  : Print messages
+
+This module allows you to print out plaintext messages prepared on the editor and deciphered messages (i.e. messages with the '.DEC' extension).
+
+Deciphered messages which have not been viewed in the editor will be printed out in an unformatted manner. Lines will be 80 characters long and words may be split at the end of lines. If you want to print out a  deciphered message in a formatted way it must first be loaded into the text editor and reshaped there (see F6 above). If the message is longer than a printed page it is best to print it out in the editor as F8 does not insert page breaks.
+
+F9  : Terminal
+
+Before pressing F9 switch on the modem at the back of the computer. The modem on/off switch is the on/off switch on the silver panel on the right side of the back of the computer (looking from the back). Connect the phone extension from the phone plug sticking out of the back of the computer to the phone socket.
+
+Pressing the F9 key takes you to the communications part of the program. Control is actually passed to another program, named Chit-Chat, but the files that you have worked on in Coder are preserved in the memory. The program reverts to Coder when you quit from Chit-Chat.
+
+From the Main Screen of Chit-Chat pressing the function keys (F1 to F10 - indicated along the bottom of the screen) takes you to various parts of the program. You may return to the main menu of the Coder Program at any point by pressing F1 (sometimes several times).
+
+Naming files in Chit-Chat is slightly different to naming them in the Coder part of the program. File names are typed on the highlight bar at the top of the screen and must always have a 'e:' or 'E:' in front of them (eg. 'e:fred.enc'). This refers to files in the memory as opposed to files on a disk.  And instead of pressing ENTER after typing in a name you are required to press F4.
+
+How to send and receive messages through Chit-Chat is explained in the 'Sample sessions' section below.
+
+F10 : Quit
+
+On pressing this key you are asked if you are sure you want to quit. Pressing 'N'o takes you back to the Main Menu of Coder; pressing 'Y'es finishes the program, after which you may turn off the computer. It is important when you are asked 'Are you sure you want to quit?' that all files you want to keep are saved on disk. Ensure that the program disk is in the drive before quitting.
+
+If you quit from Coder by mistake or want to reload it after quitting in the correct way, simply type 'coder' at the 'A>' prompt. The program will reload and all files that were in memory at the time of quitting will still be in memory. If you quit any other way the memory will be cleared of files.
+
+** NB ** Always remove all disks before switching the computer off.
+
+SAMPLE SESSIONS
+
+A. Sending a message via TG:
+
+(1)	Place the 'PROGRAM' disk in the drive.
+(2)	Switch the computer on.
+(3)	The Coder program will load automatically and you will be presented with the Main Menu.
+(4)	Press F6 to type a new message.
+(5)	Give a name to the message you are about to type.
+(6)	You are presented with the text editor: type in your message.
+(7)	When your message is finished, press F1 and then the 'E' key: your message will be saved in memory and you will be taken back to the Main Menu.
+(8)	Press F4 to encipher the message.
+(9)	Place the 'DATA' disk in the drive when asked to do so.
+(10)	Type in the name of the message that you want to encipher (remember that you have to type the extension '.txt' after the name that you originally gave your message. Eg: 'fred' has becomes 'fred.txt')
+(11)	The message is enciphered and you are shown on the screen how long it is. You are returned to the Main Menu at the end of the enciphering.
+(12)	If you want to save the message to send it later then press F2. Place the 'MESSAGE' disk in the drive when told to do so. Type in the name of the enciphered message that you want to save (it will be the original name that you gave it, with the extension '.enc'). The enciphered message will be saved and you can then press F10  to quit from the program.
+(13)	If you want to send the enciphered message immediately, turn on the modem at the back of the computer and press F9 for the terminal. But before going any further...
+(14)	Connect the phone extension lead from the phone plug sticking out of the back of the computer to the phone socket.
+(15)	From the Chit-Chat Main Screen press F2-Modem. You are then presented with a directory of phone numbers. The highlight bar will be on the first entry: 'TELECOM GOLD 300'.
+(16)	Press F4-Connect to Host.
+(17)	The modem will dial the TG number.
+(18)	When through there will be a high-pitched noise and you will see the word 'CONNECT' flash on the screen.
+(19)	If the modem does not appear to make contact or quickly drops the line, press F1-Disconnect to return to the phone directory. The highlight bar will still be on the number you dialled: press F4-Connect to Host again.
+(20)	When/if you get through, the computer should automatically log on. It will send the ID and passwords without you having to enter anything on the keyboard. If it does not log on properly and you are asked to enter an ID or password, press F1-disconnect and try again.
+(21)	If the computer logs on properly do not press any keys until the text displayed on the screen stops scrolling and you are presented with a '>' prompt. If you are not presented with a '>' prompt it means that the computer did not log on properly: press F1-Disconnect and try again.
+(22)	When you are presented with the '>' prompt type 'mail'.
+(23)	You will then be asked 'Send, Read or Scan:'. Just type 's' for send.
+(24)	Then you will be asked 'To:'. Just type 'tj' or 'TJ'. Do not type anything else.
+(25)	Then you will be asked 'Subject:'. Just type 'G > T'. This enables London to identify messages from Lusaka: there will be other messages from other people.
+(26)	Then you will be asked for 'Text:'. Here you must press F7-Send Mail. A bar will appear across the top of the screen: type in the name of the enciphered message that you want to send. BUT, the name must be preceded with a ':e' or 'E:'. Eg., if you named your message 'fred' then you must type in 'e:fred.enc'. Press F4-Continue.
+(27)	The enciphered message is sent. On the screen you will see a 'Mail Id' number and the name of the person to whom the message was sent. Ignore this.
+(28)	After the message is sent you are presented with another 'To:' prompt. Just press ENTER.
+(29)	You are then presented with another 'Send, Read or Scan:' prompt. Just press ENTER.
+(30)	Finally you will be presented with the '>' prompt. Type in 'bye'.
+(31)	Some information about 'Time used' will appear on the screen and then the line will be dropped - contact with TG will be terminated. The program should return to the phone directory. If it does not, press F1-Disconnect.
+(32)	Press F1 until you get back to the Coder program's Main Menu.
+(33)	Press F10 to quit, and 'Y' to end. FINISHED.
+
+B. Sending direct:
+
+(1)		Phone the other party and say that you would like to to send a message directly.
+(2) 	Do everything the same as above, up to point (15) - the phone directory.
+(3)		Press the down arrow to move the highlight bar down the directory until it is over the name and number you want the compter to dial.
+(4)		Press F4-Connect to Host.
+(5)		The modem will dial the number and after about 10 seconds your computer should make connection with the other computer. It will make a high-pitched sound when it gets through. If/when you are through a message will appear on the screen: 'Welcome you are now connected...'
+(6)		If you do not get through (for a number of reasons - the line could be busy or there could be too much interference), press F1-Disconnect to get back to the phone directory. Press F4-Connect to Host again.
+(7)		When properly through you will be asked: 'Please enter your USER ID:'. Type in 'lusaka'. Do not worry if it looks like 'lluussaakkaa' on the screen - this is normal!
+(8)		Then you will be asked: 'Enter your password:'. Type in 'gemtot'. Do not worry if it looks like 'g*e*m*t*o*t*' - this is normal!
+(9)		Then you will be told: 'You are now logged on...'
+(10)	Press F5-Send file. A bar will appear at the top the screen. Here you must type in the name of the enciphered message that you want to send. It must be preceded with an 'e:' or 'E:'. (eg. 'e:fred.enc'. Press F4-Continue to send it.)
+(11)	The sending might take quite some time but you will see what is happening on the screen. You will be told when the message has been sent.
+(12)	If you now type on your keyboard you can type a message to the other person. What you type will be displayed at the same time on the remote computer to which you are connected. The other person can reply by typing on their keyboard. After you have typed something you must end with a few dots, as if to say 'over' (eg. 'hello there...how are you?...ok...' etc.). DO NOT type important things on the keyboard that you would normally encipher.
+(13)	To finish (disconnect the phone) press F1. Press F1 until you get back to the Coder Main Menu.
+
+C. Receiving messages from TG:
+
+(1)		Place the 'PROGRAM' disk in the drive.
+(2)		Switch the computer on.
+(3)		The Coder program will load automatically and you will be presented with the Main Menu.
+(4)		Switch on the modem and press F9. But before going any further...
+(5)		Connect the phone extension lead from the plug sticking out of the back of the modem to the phone socket.
+(6)		From the Chit-Chat Main Screen press F2-Modem. You are then presented with a directory of phone numbers. The highlight bar will be on the first entry: 'TELECOM GOLD 300'.
+(7)		Press F4-Connect to Host.
+(8)		The modem will dial the TG number.
+(9)		When through there will be a high-pitched noise and you will see the word 'CONNECT' flash on the screen. If the modem does not appear to be getting through, press F1-Disconnect and try again.
+(10)	If the modem does not appear to make contact or quickly drops the line, press F1-Disconnect to return to the phone directory. The highlight bar will still be on the number you dialled: press F4-Connect to Host again.
+(11)	When/if you get through, the computer should automatically log on. It will send the ID and passwords without you having to enter anything on the keyboard. If it does not log on properly and asks you to enter an ID or password, press F1-Disconnect and try again.
+(12)	If the computer logs on properly do not press any keys until the text displayed on the screen stops scrolling and you are presented with a '>' prompt. If you are not presented with a '>' prompt it means that the computer did not log on properly: press F1-Disconnect and try again.
+(13)	You will then be asked 'Send, Read or Scan:'. Just type 'sc' for scan.
+(14)	You will either be told 'No mail at this time' if there is nothing or be presented with a list of the messages in the mailbox.
+(15)	If there are messages they will be numbered. Information about the message is given but all you are interested in is the 'Subject:'. If you see after 'Subject:' 'T > G' then you know there is a message for you.
+(16)	If there are no messages for you just press ENTER. Go to step (22) below.
+(17)	If there are messages for you type at the 'Read or Scan:' prompt 'r' and the number of the message which is for you. Eg. 'Read or Scan: r 3'. This means read message number three. If there is only one message and it is for you, just type 'r'.
+(18)	Information about the message will appear on the screen. It will stop moving and you will see at the bottom a '--More--' prompt. At this point you can see when the message was sent to you.
+(19)	Press F4-Capture text. A bar will appear at the top of the screen. Here you must type 'e:name'. You can give it any name you like but it must have the 'e:' in front of it. Best is to use a simple name like 'fred'. Press F4-Continue.
+(20)	Press the ENTER key and the message will appear on your screen.
+(21)	At the end of the message you will see 'Action required:'. Press 'F4-Capture text' again - this turns off the capture facility. Then just press ENTER.
+(22)	Another 'Send, Read or Scan:' prompt will appear. Just press ENTER.
+(23)	Finally you will be presented with the '>' prompt. Type in 'bye'.
+(24)	Some information about 'Time used' will appear on the screen and finally you will be disconnected from TG. You should be taken back to the phone directory but if you are not press F1-Disconnect.
+(25)	Press F1 until you get back to the Coder program's Main Menu.
+(26)	To decipher the message press F5.
+(27)	Place the 'DATA' disk in the drive when asked to do so.
+(28)	Type in the name of the message that you want to decipher (ie. the same name that you gave it when you got it from TG, but this time not with the 'e:' in front - just how it appears in the directory on the screen).
+(29)	The message is deciphered on the screen. Read it and take notes if you do not have a printer. At the end press any key to clear the screen. You do not lose the message so do not worry about pressing a key if you want to read it again later.
+(30)	Back at the Main Menu you can either save the message on the 'MESSAGE' disk by pressing F2, read it again by pressing F7 or print it out by pressing F8. At each of these you are asked to name the deciphered message. The name will be the same as before except that it will have the extension '.DEC'. You must type '.dec' after the name (eg. 'fred' becomes 'fred.dec').
+(31)	If you pressed F7 to read the message again and typed in the name you will be taken to the editor. You will see just one line of the message on the screen. Press ENTER and it will all come back. Read the message again and print it out if you want to. To get back to the Main Menu press 'F1-Quit' and 'E'.
+(32)	Press F10 to quit, and 'Y' to end. FINISHED.
+
+D. Receiving direct:
+
+(1)	You will be phoned by a communicating party that they wish to send you a message directly. You must advise them when your computer will be ready to receive the message.
+(2)	Do everthing the same as up to point (5) in Section C above - the Main Screen of Chit-Chat.
+(3)	Press F4-Host Mode. The screen will say 'Waiting for a call'.
+(4)	Your computer will then wait to receive a message. You can either wait and see what happens or go and do something else - everything happens automatically. If you watch, then after the message has been sent you can type on the keyboard to the other party. (See point B (11) above.)
+(5)	Press F1-Main Menu when the message is received (or when you have finished typing to each other). Then press F1 to go back to the Coder Main Menu. If for any reason the other party cannot get through and nothing is sent, do the same to get back to the Coder Main Menu.
+(6)	To decipher the message do the same as from point (26) in Section C above.
+
